@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import Clicker from '@/components/Clicler/Clicker.tsx';
-import {IClicks} from '@/utils/types';
 import Points from '@/components/Points/Points.tsx';
-import {POINTS_TO_ADD} from '@/utils/constants.ts';
 import Total from '@/components/Total/Total.tsx';
+
+import { IClicks } from '@/utils/types';
+import { POINTS_TO_ADD } from '@/utils/constants.ts';
+
+import styles from './Main.module.css';
 
 
 const Main = () => {
@@ -30,9 +33,13 @@ const Main = () => {
 
     return (
         <div className="container">
-            <Total points={points}/>
-            <Clicker onClick={handleCardClick}/>
-            <Points clicks={clicks} handleAnimationEnd={handleAnimationEnd}/>
+            <div className={styles.block}>
+                <Total points={points}/>
+                <Clicker onClick={handleCardClick}/>
+                <Points clicks={clicks} handleAnimationEnd={handleAnimationEnd}/>
+                <h4 className={styles.title}>Welcome to Emir's hamster clicker!</h4>
+                <p className={styles.subtitle}>Click to earn money (but you'll never get it 😜)</p>
+            </div>
         </div>
     );
 };

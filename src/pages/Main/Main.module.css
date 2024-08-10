@@ -1,0 +1,16 @@
+.block {
+    margin: 25px 0;
+}
+.title, .subtitle {
+   text-align: center;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-top: 10px;
+}
