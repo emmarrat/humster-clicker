@@ -7,10 +7,12 @@
 }
 
 .title {
-    font-size: 28px;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 10px;
+    font-weight: 300;
 }
