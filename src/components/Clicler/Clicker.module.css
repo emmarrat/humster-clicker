@@ -1,4 +1,35 @@
+:root {
+    --primary-gradient-start: #5AFF7D;
+    --primary-gradient-end: #11998E;
+    --secondary-gradient-start: #38EF7D;
+    --secondary-gradient-end: #0D3D31;
+    --shadow-color: #0003;
+    --block-width: 280px;
+    --block-margin: 20px auto;
+    --inner-block-margin: 15px;
+    --border-radius: 50%;
+}
+
+.block, .innerBlock {
+    width: var(--block-width);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .block {
-    border-radius: 50%;
-    background: red;
+    margin: var(--block-margin);
+    background: linear-gradient(to bottom, var(--primary-gradient-start), var(--primary-gradient-end));
+}
+
+.innerBlock {
+    margin: var(--inner-block-margin);
+    background: radial-gradient(circle, var(--secondary-gradient-start), var(--secondary-gradient-end));
+    box-shadow: 0 1px 1px var(--shadow-color);
+}
+
+.avatar {
+    width: 100%;
+    height: auto;
 }

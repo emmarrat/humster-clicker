@@ -9,10 +9,10 @@ interface Props {
 
 const Clicker: React.FC<Props> = ({onClick}) => {
     return (
-        <div className={styles.block}>
-            <div onClick={(e) => onClick(e)}>
+        <div className={styles.block} onClick={(e) => onClick(e)}>
+            <div className={styles.innerBlock} >
                 <div className="w-full h-full rounded-full circle-inner">
-                    <img src={clickerAvatar} alt="Clicker avatar" className="w-full h-full"/>
+                    <img src={clickerAvatar} alt="Clicker avatar" className={styles.avatar}/>
                 </div>
             </div>
         </div>
