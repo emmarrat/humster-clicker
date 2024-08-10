@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import Clicker from '@/components/Clicler/Clicker.tsx';
 import {IClicks} from '@/utils/types';
 import Points from '@/components/Points/Points.tsx';
-
+import {POINTS_TO_ADD} from '@/utils/constants.ts';
+import Total from '@/components/Total/Total.tsx';
 
 
 const Main = () => {
     const [points, setPoints] = useState(0);
     const [clicks, setClicks] = useState<IClicks[]>([]);
-    const pointsToAdd = 11;
 
     const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
         const card = e.currentTarget;
@@ -20,8 +20,8 @@ const Main = () => {
             card.style.transform = '';
         }, 100);
 
-        setPoints(points + pointsToAdd);
-        setClicks([...clicks, { id: Date.now(), x: e.pageX, y: e.pageY }]);
+        setPoints(points + POINTS_TO_ADD);
+        setClicks([...clicks, {id: Date.now(), x: e.pageX, y: e.pageY}]);
     };
 
     const handleAnimationEnd = (id: number) => {
@@ -30,8 +30,9 @@ const Main = () => {
 
     return (
         <div className="container">
+            <Total points={points}/>
             <Clicker onClick={handleCardClick}/>
-            <Points clicks={clicks} handleAnimationEnd={handleAnimationEnd} />
+            <Points clicks={clicks} handleAnimationEnd={handleAnimationEnd}/>
         </div>
     );
 };
