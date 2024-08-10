@@ -1,15 +1,3 @@
-:root {
-    --primary-gradient-start: #5AFF7D;
-    --primary-gradient-end: #11998E;
-    --secondary-gradient-start: #38EF7D;
-    --secondary-gradient-end: #0D3D31;
-    --shadow-color: #0003;
-    --block-width: 280px;
-    --block-margin: 20px auto;
-    --inner-block-margin: 15px;
-    --border-radius: 50%;
-}
-
 .block, .innerBlock {
     width: var(--block-width);
     border-radius: var(--border-radius);
