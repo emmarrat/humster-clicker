@@ -1,0 +1,19 @@
+.text {
+    position: absolute;
+    font-size: 3rem; /* Adjust as necessary */
+    font-weight: bold;
+    color: black;
+    pointer-events: none;
+    animation: float 2s ease-out forwards;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
