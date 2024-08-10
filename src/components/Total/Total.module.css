@@ -1,0 +1,21 @@
+.block {
+    margin: 0 auto;
+}
+
+.innerBlock {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin {
+    width: 40px;
+    height: 40px;
+}
+
+.points {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+}
